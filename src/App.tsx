@@ -1,4 +1,4 @@
-import { Phone, Mail, MessageCircle, CheckCircle, Star } from 'lucide-react';
+import { Phone, Mail, MessageCircle, CheckCircle, Star, Flame, Droplet, Wrench, Shield } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 
 function App() {
@@ -11,12 +11,16 @@ function App() {
   const projectImages = useMemo(
     () => [
       {
-        src: '/images/141162745_166886898541785_3206217556152132377_n.jpg',
-        alt: 'Recent project photo 1',
+        src: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=800&fit=crop',
+        alt: 'Boiler installation project',
       },
       {
-        src: '/images/144267807_172518794645262_2005533432112588930_n.jpg',
-        alt: 'Recent project photo 2',
+        src: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1200&h=800&fit=crop',
+        alt: 'Heating system repair',
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1200&h=800&fit=crop',
+        alt: 'Bathroom plumbing work',
       },
     ],
     []
@@ -38,11 +42,11 @@ function App() {
     setFormData({ name: '', phone: '', message: '' });
   };
 
-  const phoneNumberDisplay = '045 499 208';
-  const phoneNumberTel = '045499208';
-  const facebookUrl = 'https://www.facebook.com/tobroofingandgutteringireland/';
-  const whatsappNumber = '447123456789';
-  const whatsappMessage = encodeURIComponent("Hi, I'm interested in roofing or guttering services.");
+  const phoneNumberDisplay = '01 234 5678';
+  const phoneNumberTel = '012345678';
+  const facebookUrl = 'https://www.facebook.com/citywideheatingsolutions/';
+  const whatsappNumber = '353123456789';
+  const whatsappMessage = encodeURIComponent("Hi, I'm interested in heating or plumbing services.");
 
   return (
     <div className="min-h-screen bg-white">
@@ -50,13 +54,10 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
-              <img
-                src="/images/logo.jpg"
-                alt="TOB Roofing & Guttering"
-                className="h-10 w-10 sm:h-12 sm:w-12"
-                loading="eager"
-              />
-              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">TOB Roofing & Guttering</h1>
+              <div className="bg-blue-600 p-2 rounded-lg">
+                <Flame size={28} className="text-white" />
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">Citywide Heating & Plumbing</h1>
             </div>
             <a
               href={`tel:${phoneNumberTel}`}
@@ -74,10 +75,10 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div className="max-w-2xl">
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Professional Roofing & Guttering Services You Can Trust
+                Professional Heating & Plumbing Services You Can Trust
               </h2>
               <p className="text-xl sm:text-2xl text-gray-300 mb-10 leading-relaxed">
-                Expert craftsmanship, reliable service, and quality materials for your home or business.
+                RGI registered installers providing expert heating, plumbing, and gas services for your home or business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -97,12 +98,22 @@ function App() {
 
             <div className="relative">
               <div className="absolute inset-0 bg-blue-600/10 rounded-2xl blur-2xl" aria-hidden="true"></div>
-              <img
-                src="/images/head%20banner.png"
-                alt="Roofing and guttering services"
-                className="relative w-full max-w-2xl mx-auto rounded-2xl border border-white/10 shadow-2xl"
-                loading="eager"
-              />
+              <div className="relative w-full max-w-2xl mx-auto rounded-2xl border border-white/10 shadow-2xl bg-gradient-to-br from-blue-600 to-blue-800 p-16">
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 flex items-center justify-center">
+                    <Flame size={80} className="text-white" />
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 flex items-center justify-center">
+                    <Droplet size={80} className="text-white" />
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 flex items-center justify-center">
+                    <Wrench size={80} className="text-white" />
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 flex items-center justify-center">
+                    <Shield size={80} className="text-white" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -152,7 +163,7 @@ function App() {
             <div className="lg:col-span-7">
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Local, reliable service</h3>
               <p className="text-gray-700 mt-3 leading-relaxed max-w-2xl">
-                We take on roofing and guttering jobs for local customers and surrounding areas. Not sure if we cover your location? Give us a quick call and we’ll confirm availability.
+                We provide heating and plumbing services for customers across the city and surrounding areas. Not sure if we cover your location? Give us a quick call and we'll confirm availability.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mt-6">
                 <a
@@ -185,7 +196,7 @@ function App() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle size={20} className="text-blue-600 mt-0.5" />
-                    <span>Practical solutions to prevent future leaks and blockages</span>
+                    <span>RGI registered and fully insured for your peace of mind</span>
                   </li>
                 </ul>
               </div>
@@ -205,16 +216,30 @@ function App() {
 
           <div className="grid lg:grid-cols-12 gap-10 items-center mb-14">
             <div className="lg:col-span-5">
-              <img
-                src="/images/services.svg"
-                alt="Roofing and guttering services"
-                className="w-full rounded-2xl border border-gray-200"
-                loading="lazy"
-              />
+              <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl border border-gray-200 p-8">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center gap-3">
+                    <Flame size={48} className="text-blue-600" />
+                    <span className="text-sm font-semibold text-gray-700">Heating</span>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center gap-3">
+                    <Droplet size={48} className="text-blue-600" />
+                    <span className="text-sm font-semibold text-gray-700">Plumbing</span>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center gap-3">
+                    <Wrench size={48} className="text-blue-600" />
+                    <span className="text-sm font-semibold text-gray-700">Repairs</span>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center gap-3">
+                    <Shield size={48} className="text-blue-600" />
+                    <span className="text-sm font-semibold text-gray-700">Gas Safety</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="lg:col-span-7">
               <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
-                From full roof replacements to gutter repairs and cleaning, we deliver durable, tidy work with clear communication and reliable timelines.
+                From boiler installations and repairs to emergency plumbing and gas safety checks, we deliver professional, reliable service with clear communication and guaranteed quality.
               </p>
             </div>
           </div>
@@ -222,37 +247,37 @@ function App() {
           <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Roofing Installation & Replacement
+                Boiler Installation & Replacement
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Complete roof installations and full replacements using quality materials. We handle all types of roofing systems with precision and care.
+                Expert boiler installations and replacements by RGI registered engineers. We fit all major brands with full warranty and certification.
               </p>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Roof Repairs
+                Heating System Repairs
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Fast and reliable roof repairs for leaks, damaged tiles, and storm damage. We respond quickly to protect your property.
+                Fast and reliable heating repairs including boiler breakdowns, radiator issues, and system faults. Emergency callouts available.
               </p>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Guttering Installation
+                Plumbing Services
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Professional gutter installations designed to protect your property from water damage. Quality systems that last.
+                Complete plumbing solutions from leak repairs and pipe installations to bathroom fitting and water heater services.
               </p>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Gutter Repairs & Cleaning
+                Gas Safety & Servicing
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Expert gutter repairs and thorough cleaning services to keep your drainage system working efficiently year-round.
+                Annual gas safety checks, boiler servicing, and gas appliance installations. All work certified and fully compliant.
               </p>
             </div>
           </div>
@@ -271,16 +296,17 @@ function App() {
           <div className="grid lg:grid-cols-12 gap-10 items-center mb-14">
             <div className="lg:col-span-7">
               <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
-                We focus on workmanship, quality materials, and a reliable service you can recommend. You’ll get a clear quote and a professional finish.
+                RGI registered installers with years of experience. We focus on quality workmanship, safety compliance, and reliable service you can trust. Clear quotes and professional results guaranteed.
               </p>
             </div>
             <div className="lg:col-span-5">
-              <img
-                src="/images/why-us.svg"
-                alt="Why choose TOB Roofing & Guttering"
-                className="w-full rounded-2xl border border-gray-200"
-                loading="lazy"
-              />
+              <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl border border-gray-200 p-12 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <Shield size={120} className="mx-auto mb-6" />
+                  <p className="text-2xl font-bold">RGI Registered</p>
+                  <p className="text-blue-100 mt-2">Professional & Certified</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -289,16 +315,16 @@ function App() {
               <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
                 <CheckCircle size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Skilled Workmanship</h3>
-              <p className="text-gray-700">Experienced professionals delivering quality results</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">RGI Registered</h3>
+              <p className="text-gray-700">Fully qualified and certified gas installers</p>
             </div>
 
             <div className="flex flex-col items-center text-center">
               <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
                 <CheckCircle size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Quality Materials</h3>
-              <p className="text-gray-700">We use only trusted, durable materials</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Quality Brands</h3>
+              <p className="text-gray-700">We install and service all major heating brands</p>
             </div>
 
             <div className="flex flex-col items-center text-center">
@@ -313,8 +339,8 @@ function App() {
               <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
                 <CheckCircle size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Reliable Service</h3>
-              <p className="text-gray-700">On time, professional, and dependable</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">24/7 Emergency</h3>
+              <p className="text-gray-700">Emergency callouts for heating and plumbing</p>
             </div>
           </div>
         </div>
@@ -367,9 +393,9 @@ function App() {
           <div className="mt-14 max-w-6xl mx-auto bg-gray-900 text-white rounded-2xl p-8 sm:p-10">
             <div className="grid md:grid-cols-12 gap-8 items-center">
               <div className="md:col-span-8">
-                <h3 className="text-2xl font-bold">Want the fastest quote?</h3>
+                <h3 className="text-2xl font-bold">Need an emergency callout?</h3>
                 <p className="text-gray-300 mt-2 leading-relaxed">
-                  If you can, include your address (or nearest town), what the issue is, and a couple of photos of the area.
+                  For boiler breakdowns, heating failures, or plumbing emergencies, call us now for immediate assistance.
                 </p>
               </div>
               <div className="md:col-span-4 flex md:justify-end">
@@ -434,16 +460,21 @@ function App() {
 
           <div className="grid lg:grid-cols-12 gap-10 items-center mb-14">
             <div className="lg:col-span-5">
-              <img
-                src="/images/testimonials.svg"
-                alt="Customer testimonials"
-                className="w-full rounded-2xl border border-gray-200"
-                loading="lazy"
-              />
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl border border-gray-200 p-12 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="flex gap-2 justify-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} size={48} className="fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-2xl font-bold text-gray-900">5-Star Reviews</p>
+                  <p className="text-gray-600 mt-2">Trusted by our customers</p>
+                </div>
+              </div>
             </div>
             <div className="lg:col-span-7">
               <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
-                We aim for five-star results on every job: clear communication, tidy workmanship, and a finish that lasts.
+                We pride ourselves on excellent customer service, professional workmanship, and reliable heating and plumbing solutions that stand the test of time.
               </p>
             </div>
           </div>
@@ -456,7 +487,7 @@ function App() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                "Excellent service from start to finish. The team replaced our entire roof and the quality of work is outstanding. Highly professional and reliable."
+                "Excellent service from start to finish. New boiler installed professionally with full certification. The engineer was knowledgeable and tidy. Highly recommended."
               </p>
               <p className="font-bold text-gray-900">Sarah M.</p>
               <p className="text-sm text-gray-500">Google Review</p>
@@ -469,7 +500,7 @@ function App() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                "Very impressed with the gutter installation. The team was punctual, tidy, and the pricing was fair. Would definitely recommend to others."
+                "Called them for an emergency heating breakdown. They arrived within 2 hours and had us up and running the same day. Fair pricing and excellent work."
               </p>
               <p className="font-bold text-gray-900">James T.</p>
               <p className="text-sm text-gray-500">Google Review</p>
@@ -482,7 +513,7 @@ function App() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                "Quick response to our emergency roof repair. The work was done efficiently and the problem was completely solved. Trustworthy company."
+                "Professional plumbing service for our bathroom renovation. Clean work, on time, and within budget. Will definitely use them again."
               </p>
               <p className="font-bold text-gray-900">Linda R.</p>
               <p className="text-sm text-gray-500">Google Review</p>
@@ -502,16 +533,17 @@ function App() {
 
           <div className="grid lg:grid-cols-12 gap-10 items-center mb-14">
             <div className="lg:col-span-5">
-              <img
-                src="/images/contact.svg"
-                alt="Contact TOB Roofing & Guttering"
-                className="w-full rounded-2xl border border-white/10"
-                loading="lazy"
-              />
+              <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl border border-white/10 p-12 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <Phone size={80} className="mx-auto mb-6" />
+                  <p className="text-2xl font-bold">Get In Touch</p>
+                  <p className="text-blue-100 mt-2">We're here to help</p>
+                </div>
+              </div>
             </div>
             <div className="lg:col-span-7">
               <p className="text-lg text-gray-200 leading-relaxed max-w-3xl">
-                Tell us what you need help with and we’ll get back to you as soon as possible.
+                Whether it's a new boiler installation, heating repair, or plumbing work, get in touch and we'll provide a free, no-obligation quote.
               </p>
             </div>
           </div>
@@ -610,9 +642,9 @@ function App() {
       <footer className="bg-gray-950 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-3">TOB Roofing & Guttering</h3>
+            <h3 className="text-2xl font-bold mb-3">Citywide Heating & Plumbing Solutions</h3>
             <p className="text-gray-400 mb-4 max-w-2xl mx-auto">
-              Your trusted partner for professional roofing and guttering services. Quality workmanship and reliable service since day one.
+              Your trusted RGI registered heating and plumbing specialists. Professional service, quality workmanship, and complete customer satisfaction.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-gray-300 mb-4">
               <a
@@ -633,7 +665,7 @@ function App() {
               </a>
             </div>
             <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} TOB Roofing & Guttering. All rights reserved.
+              © {new Date().getFullYear()} Citywide Heating & Plumbing Solutions. All rights reserved.
             </p>
           </div>
         </div>
