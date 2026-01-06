@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Past project: roof replacement">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="120" y="120" width="960" height="560" rx="36" fill="#0b1220" opacity="0.55"/>
+  <path d="M240 450L600 220l360 230" fill="none" stroke="url(#roof)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M300 420v220a28 28 0 0 0 28 28h544a28 28 0 0 0 28-28V420" fill="none" stroke="#e5e7eb" stroke-width="16" opacity="0.6"/>
+  <g opacity="0.28" fill="#e5e7eb">
+    <path d="M460 360l30-22 30 22-30 22z"/>
+    <path d="M540 320l30-22 30 22-30 22z"/>
+    <path d="M620 360l30-22 30 22-30 22z"/>
+    <path d="M700 320l30-22 30 22-30 22z"/>
+    <path d="M780 360l30-22 30 22-30 22z"/>
+  </g>
+  <text x="160" y="740" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="44" fill="#e5e7eb" opacity="0.9" font-weight="800">Roof Replacement</text>
+</svg>
