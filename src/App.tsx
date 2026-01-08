@@ -1,4 +1,4 @@
-import { Phone, Mail, MessageCircle, CheckCircle, Star, Flame, Droplet, Wrench, Shield } from 'lucide-react';
+import { Phone, Mail, MessageCircle, CheckCircle, Star, Scissors, Sparkles, MapPin, Clock } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 
 function App() {
@@ -11,16 +11,16 @@ function App() {
   const projectImages = useMemo(
     () => [
       {
-        src: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=800&fit=crop',
-        alt: 'Boiler installation project',
+        src: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&h=800&fit=crop',
+        alt: 'Professional haircut service',
       },
       {
-        src: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1200&h=800&fit=crop',
-        alt: 'Heating system repair',
+        src: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=1200&h=800&fit=crop',
+        alt: 'Beard grooming and trim',
       },
       {
-        src: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1200&h=800&fit=crop',
-        alt: 'Bathroom plumbing work',
+        src: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1200&h=800&fit=crop',
+        alt: 'Mobile barbering setup',
       },
     ],
     []
@@ -42,11 +42,11 @@ function App() {
     setFormData({ name: '', phone: '', message: '' });
   };
 
-  const phoneNumberDisplay = '01 234 5678';
-  const phoneNumberTel = '012345678';
-  const facebookUrl = 'https://www.facebook.com/citywideheatingsolutions/';
-  const whatsappNumber = '353123456789';
-  const whatsappMessage = encodeURIComponent("Hi, I'm interested in heating or plumbing services.");
+  const phoneNumberDisplay = '087 123 4567';
+  const phoneNumberTel = '0871234567';
+  const facebookUrl = 'https://www.facebook.com/lisasmobilebarbers/';
+  const whatsappNumber = '353871234567';
+  const whatsappMessage = encodeURIComponent("Hi, I'd like to book a mobile barbering appointment.");
 
   return (
     <div className="min-h-screen bg-white">
@@ -54,14 +54,14 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <Flame size={28} className="text-white" />
+              <div className="bg-pink-600 p-2 rounded-lg">
+                <Scissors size={28} className="text-white" />
               </div>
-              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">Citywide Heating & Plumbing</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">Lisa's Mobile Barbers</h1>
             </div>
             <a
               href={`tel:${phoneNumberTel}`}
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors font-semibold text-sm sm:text-base"
+              className="flex items-center gap-2 bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg transition-colors font-semibold text-sm sm:text-base"
             >
               <Phone size={18} />
               <span className="hidden sm:inline">Call Now</span>
@@ -75,17 +75,17 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div className="max-w-2xl">
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Professional Heating & Plumbing Services You Can Trust
+                Professional Mobile Barbering Services at Your Doorstep
               </h2>
               <p className="text-xl sm:text-2xl text-gray-300 mb-10 leading-relaxed">
-                RGI registered installers providing expert heating, plumbing, and gas services for your home or business.
+                Expert haircuts, styling, and grooming services delivered to your home, office, or preferred location.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors text-center shadow-xl"
+                  className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors text-center shadow-xl"
                 >
-                  Get a Free Quote
+                  Book an Appointment
                 </a>
                 <a
                   href={`tel:${phoneNumberTel}`}
@@ -97,20 +97,20 @@ function App() {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-blue-600/10 rounded-2xl blur-2xl" aria-hidden="true"></div>
-              <div className="relative w-full max-w-2xl mx-auto rounded-2xl border border-white/10 shadow-2xl bg-gradient-to-br from-blue-600 to-blue-800 p-16">
+              <div className="absolute inset-0 bg-pink-600/10 rounded-2xl blur-2xl" aria-hidden="true"></div>
+              <div className="relative w-full max-w-2xl mx-auto rounded-2xl border border-white/10 shadow-2xl bg-gradient-to-br from-pink-600 to-purple-800 p-16">
                 <div className="grid grid-cols-2 gap-8">
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 flex items-center justify-center">
-                    <Flame size={80} className="text-white" />
+                    <Scissors size={80} className="text-white" />
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 flex items-center justify-center">
-                    <Droplet size={80} className="text-white" />
+                    <Sparkles size={80} className="text-white" />
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 flex items-center justify-center">
-                    <Wrench size={80} className="text-white" />
+                    <MapPin size={80} className="text-white" />
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 flex items-center justify-center">
-                    <Shield size={80} className="text-white" />
+                    <Clock size={80} className="text-white" />
                   </div>
                 </div>
               </div>
@@ -161,9 +161,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7">
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Local, reliable service</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Mobile service across the city</h3>
               <p className="text-gray-700 mt-3 leading-relaxed max-w-2xl">
-                We provide heating and plumbing services for customers across the city and surrounding areas. Not sure if we cover your location? Give us a quick call and we'll confirm availability.
+                I bring professional barbering services directly to your location - home, office, or anywhere convenient for you. Not sure if I cover your area? Give me a quick call to check availability.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mt-6">
                 <a
@@ -175,9 +175,9 @@ function App() {
                 </a>
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-bold transition-colors"
                 >
-                  Get a Free Quote
+                  Book an Appointment
                 </a>
               </div>
             </div>
@@ -187,16 +187,16 @@ function App() {
                 <h4 className="text-lg font-bold text-gray-900">What you can expect</h4>
                 <ul className="mt-4 space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-blue-600 mt-0.5" />
-                    <span>Clear, friendly communication from first call to completion</span>
+                    <CheckCircle size={20} className="text-pink-600 mt-0.5" />
+                    <span>Professional service with a personal touch</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-blue-600 mt-0.5" />
-                    <span>Tidy workmanship and respect for your property</span>
+                    <CheckCircle size={20} className="text-pink-600 mt-0.5" />
+                    <span>Clean, tidy setup and respect for your space</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-blue-600 mt-0.5" />
-                    <span>RGI registered and fully insured for your peace of mind</span>
+                    <CheckCircle size={20} className="text-pink-600 mt-0.5" />
+                    <span>Flexible scheduling to suit your lifestyle</span>
                   </li>
                 </ul>
               </div>
@@ -211,35 +211,35 @@ function App() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Our Services
             </h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+            <div className="w-24 h-1 bg-pink-600 mx-auto"></div>
           </div>
 
           <div className="grid lg:grid-cols-12 gap-10 items-center mb-14">
             <div className="lg:col-span-5">
-              <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl border border-gray-200 p-8">
+              <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl border border-gray-200 p-8">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center gap-3">
-                    <Flame size={48} className="text-blue-600" />
-                    <span className="text-sm font-semibold text-gray-700">Heating</span>
+                    <Scissors size={48} className="text-pink-600" />
+                    <span className="text-sm font-semibold text-gray-700">Haircuts</span>
                   </div>
                   <div className="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center gap-3">
-                    <Droplet size={48} className="text-blue-600" />
-                    <span className="text-sm font-semibold text-gray-700">Plumbing</span>
+                    <Sparkles size={48} className="text-pink-600" />
+                    <span className="text-sm font-semibold text-gray-700">Styling</span>
                   </div>
                   <div className="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center gap-3">
-                    <Wrench size={48} className="text-blue-600" />
-                    <span className="text-sm font-semibold text-gray-700">Repairs</span>
+                    <MapPin size={48} className="text-pink-600" />
+                    <span className="text-sm font-semibold text-gray-700">Mobile</span>
                   </div>
                   <div className="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center gap-3">
-                    <Shield size={48} className="text-blue-600" />
-                    <span className="text-sm font-semibold text-gray-700">Gas Safety</span>
+                    <Clock size={48} className="text-pink-600" />
+                    <span className="text-sm font-semibold text-gray-700">Flexible</span>
                   </div>
                 </div>
               </div>
             </div>
             <div className="lg:col-span-7">
               <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
-                From boiler installations and repairs to emergency plumbing and gas safety checks, we deliver professional, reliable service with clear communication and guaranteed quality.
+                From classic cuts to modern styles, beard trims to hot towel shaves, I deliver professional barbering services with the convenience of coming to you.
               </p>
             </div>
           </div>
@@ -247,37 +247,37 @@ function App() {
           <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Boiler Installation & Replacement
+                Men's Haircuts
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Expert boiler installations and replacements by RGI registered engineers. We fit all major brands with full warranty and certification.
+                Classic and contemporary haircuts tailored to your style. From fades and undercuts to traditional cuts, delivered with precision.
               </p>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Heating System Repairs
+                Beard Grooming & Trims
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Fast and reliable heating repairs including boiler breakdowns, radiator issues, and system faults. Emergency callouts available.
+                Expert beard shaping, trimming, and grooming services. Hot towel treatments and precision detailing for a polished look.
               </p>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Plumbing Services
+                Kids' Cuts
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Complete plumbing solutions from leak repairs and pipe installations to bathroom fitting and water heater services.
+                Patient, gentle haircuts for children of all ages. Making haircut time fun and stress-free at the comfort of your home.
               </p>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Gas Safety & Servicing
+                Special Occasions
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Annual gas safety checks, boiler servicing, and gas appliance installations. All work certified and fully compliant.
+                Weddings, events, or important meetings - look your best with professional styling and grooming services on your schedule.
               </p>
             </div>
           </div>
@@ -290,21 +290,21 @@ function App() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Why Choose Us
             </h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+            <div className="w-24 h-1 bg-pink-600 mx-auto"></div>
           </div>
 
           <div className="grid lg:grid-cols-12 gap-10 items-center mb-14">
             <div className="lg:col-span-7">
               <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
-                RGI registered installers with years of experience. We focus on quality workmanship, safety compliance, and reliable service you can trust. Clear quotes and professional results guaranteed.
+                Professional barbering with the convenience of mobile service. I bring years of experience, quality products, and attention to detail directly to your location.
               </p>
             </div>
             <div className="lg:col-span-5">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl border border-gray-200 p-12 flex items-center justify-center">
+              <div className="bg-gradient-to-br from-pink-600 to-purple-800 rounded-2xl border border-gray-200 p-12 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <Shield size={120} className="mx-auto mb-6" />
-                  <p className="text-2xl font-bold">RGI Registered</p>
-                  <p className="text-blue-100 mt-2">Professional & Certified</p>
+                  <Scissors size={120} className="mx-auto mb-6" />
+                  <p className="text-2xl font-bold">Mobile Barber</p>
+                  <p className="text-pink-100 mt-2">Professional & Convenient</p>
                 </div>
               </div>
             </div>
@@ -312,35 +312,35 @@ function App() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="flex flex-col items-center text-center">
-              <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
+              <div className="bg-pink-600 text-white p-4 rounded-full mb-4">
                 <CheckCircle size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">RGI Registered</h3>
-              <p className="text-gray-700">Fully qualified and certified gas installers</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Mobile Convenience</h3>
+              <p className="text-gray-700">Services at your home, office, or location</p>
             </div>
 
             <div className="flex flex-col items-center text-center">
-              <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
+              <div className="bg-pink-600 text-white p-4 rounded-full mb-4">
                 <CheckCircle size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Quality Brands</h3>
-              <p className="text-gray-700">We install and service all major heating brands</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Experienced Barber</h3>
+              <p className="text-gray-700">Years of professional cutting and styling</p>
             </div>
 
             <div className="flex flex-col items-center text-center">
-              <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
+              <div className="bg-pink-600 text-white p-4 rounded-full mb-4">
                 <CheckCircle size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Honest Pricing</h3>
-              <p className="text-gray-700">Transparent quotes with no hidden costs</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Flexible Scheduling</h3>
+              <p className="text-gray-700">Appointments to suit your timetable</p>
             </div>
 
             <div className="flex flex-col items-center text-center">
-              <div className="bg-blue-600 text-white p-4 rounded-full mb-4">
+              <div className="bg-pink-600 text-white p-4 rounded-full mb-4">
                 <CheckCircle size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">24/7 Emergency</h3>
-              <p className="text-gray-700">Emergency callouts for heating and plumbing</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Quality Products</h3>
+              <p className="text-gray-700">Premium grooming products used</p>
             </div>
           </div>
         </div>
@@ -350,9 +350,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">How We Work</h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+            <div className="w-24 h-1 bg-pink-600 mx-auto"></div>
             <p className="text-gray-700 mt-5 max-w-3xl mx-auto text-lg leading-relaxed">
-              A simple, reliable process—so you know what’s happening at every step.
+              Simple booking process—so you can get a fresh cut without the hassle of leaving home.
             </p>
           </div>
 
@@ -393,17 +393,17 @@ function App() {
           <div className="mt-14 max-w-6xl mx-auto bg-gray-900 text-white rounded-2xl p-8 sm:p-10">
             <div className="grid md:grid-cols-12 gap-8 items-center">
               <div className="md:col-span-8">
-                <h3 className="text-2xl font-bold">Need an emergency callout?</h3>
+                <h3 className="text-2xl font-bold">Ready for a fresh cut?</h3>
                 <p className="text-gray-300 mt-2 leading-relaxed">
-                  For boiler breakdowns, heating failures, or plumbing emergencies, call us now for immediate assistance.
+                  Book your mobile barbering appointment today and enjoy professional grooming at your convenience.
                 </p>
               </div>
               <div className="md:col-span-4 flex md:justify-end">
                 <a
                   href="#contact"
-                  className="w-full md:w-auto inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-xl"
+                  className="w-full md:w-auto inline-flex items-center justify-center bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-xl"
                 >
-                  Request a Quote
+                  Book Now
                 </a>
               </div>
             </div>
@@ -415,7 +415,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">FAQs</h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+            <div className="w-24 h-1 bg-pink-600 mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -455,7 +455,7 @@ function App() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               What Our Customers Say
             </h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+            <div className="w-24 h-1 bg-pink-600 mx-auto"></div>
           </div>
 
           <div className="grid lg:grid-cols-12 gap-10 items-center mb-14">
@@ -474,7 +474,7 @@ function App() {
             </div>
             <div className="lg:col-span-7">
               <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
-                We pride ourselves on excellent customer service, professional workmanship, and reliable heating and plumbing solutions that stand the test of time.
+                Customer satisfaction is my priority. Professional cuts, friendly service, and the convenience of coming to you.
               </p>
             </div>
           </div>
@@ -487,9 +487,9 @@ function App() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                "Excellent service from start to finish. New boiler installed professionally with full certification. The engineer was knowledgeable and tidy. Highly recommended."
+                "Brilliant service! Lisa came to my house and gave me an excellent haircut. So convenient and professional. Won't go back to a regular barber now!"
               </p>
-              <p className="font-bold text-gray-900">Sarah M.</p>
+              <p className="font-bold text-gray-900">Michael K.</p>
               <p className="text-sm text-gray-500">Google Review</p>
             </div>
 
@@ -500,9 +500,9 @@ function App() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                "Called them for an emergency heating breakdown. They arrived within 2 hours and had us up and running the same day. Fair pricing and excellent work."
+                "Perfect for busy parents! Lisa cut both my boys' hair at home while they were comfortable. Great with kids and the cuts look fantastic."
               </p>
-              <p className="font-bold text-gray-900">James T.</p>
+              <p className="font-bold text-gray-900">Sarah D.</p>
               <p className="text-sm text-gray-500">Google Review</p>
             </div>
 
@@ -513,9 +513,9 @@ function App() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                "Professional plumbing service for our bathroom renovation. Clean work, on time, and within budget. Will definitely use them again."
+                "Top quality cut and beard trim. Lisa is skilled, punctual, and very professional. The mobile service is a game changer. Highly recommend!"
               </p>
-              <p className="font-bold text-gray-900">Linda R.</p>
+              <p className="font-bold text-gray-900">David R.</p>
               <p className="text-sm text-gray-500">Google Review</p>
             </div>
           </div>
@@ -526,24 +526,24 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              Request a Free Quote
+              Book an Appointment
             </h2>
-            <p className="text-xl text-gray-300">Get in touch today for a no-obligation quote</p>
+            <p className="text-xl text-gray-300">Get in touch to schedule your mobile barbering service</p>
           </div>
 
           <div className="grid lg:grid-cols-12 gap-10 items-center mb-14">
             <div className="lg:col-span-5">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl border border-white/10 p-12 flex items-center justify-center">
+              <div className="bg-gradient-to-br from-pink-500 to-purple-700 rounded-2xl border border-white/10 p-12 flex items-center justify-center">
                 <div className="text-center text-white">
                   <Phone size={80} className="mx-auto mb-6" />
                   <p className="text-2xl font-bold">Get In Touch</p>
-                  <p className="text-blue-100 mt-2">We're here to help</p>
+                  <p className="text-pink-100 mt-2">I'm here to help</p>
                 </div>
               </div>
             </div>
             <div className="lg:col-span-7">
               <p className="text-lg text-gray-200 leading-relaxed max-w-3xl">
-                Whether it's a new boiler installation, heating repair, or plumbing work, get in touch and we'll provide a free, no-obligation quote.
+                Ready to book? Let me know your preferred date and time, and I'll come to your location for a professional cut.
               </p>
             </div>
           </div>
@@ -629,9 +629,9 @@ function App() {
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-xl"
+                  className="w-full bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-xl"
                 >
-                  Send Enquiry
+                  Book Appointment
                 </button>
               </form>
             </div>
@@ -642,9 +642,9 @@ function App() {
       <footer className="bg-gray-950 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-3">Citywide Heating & Plumbing Solutions</h3>
+            <h3 className="text-2xl font-bold mb-3">Lisa's Mobile Barbers</h3>
             <p className="text-gray-400 mb-4 max-w-2xl mx-auto">
-              Your trusted RGI registered heating and plumbing specialists. Professional service, quality workmanship, and complete customer satisfaction.
+              Professional mobile barbering services bringing quality cuts and grooming to your doorstep. Convenience meets expertise.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-gray-300 mb-4">
               <a
@@ -665,7 +665,7 @@ function App() {
               </a>
             </div>
             <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} Citywide Heating & Plumbing Solutions. All rights reserved.
+              © {new Date().getFullYear()} Lisa's Mobile Barbers. All rights reserved.
             </p>
           </div>
         </div>
